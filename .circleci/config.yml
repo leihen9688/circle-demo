@@ -1,7 +1,7 @@
 version: 2
-jobs: 
+jobs:
   build:
-    docker: 
+    docker:
       - image: circleci/node:10
     branches:
       only:
@@ -27,7 +27,7 @@ jobs:
       - run:
           name: Prepare shell commands
           # shell chmod +x 赋予执行权限
-          # 执行 shell 脚本
+          # 执行shell脚本
           command: chmod +x scripts/deploy.sh
       - run:
           name: Run Deploy to Github pages
